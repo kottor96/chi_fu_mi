@@ -1,11 +1,11 @@
 
 
-export default function Scoring({score}) {
+export default function Scoring({score,botScore}) {
     return(
         <div>
             <p>
                 score <br />
-                <span id="score">{score}</span>
+                <span id="score">J: {score} - B: {botScore}</span>
             </p>  
         </div>
     )

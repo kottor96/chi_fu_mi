@@ -7,7 +7,7 @@ export default function HeaderP(props){
     return(
         <header>
             <Logo logo={tBtn}/>
-            <Scoring/>
+            <Scoring {...props}/>
         </header>
     )
 }
