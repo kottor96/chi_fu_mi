@@ -1,8 +1,8 @@
 
-export default function Bouton({arme,alt}) {
+export default function Bouton({arme,alt,color}) {
     return(
-        <div>
-            <img src={arme} alt={alt} />
+        <div className={color}>
+            <img src={arme} alt={alt}/>
         </div>
     )
 
