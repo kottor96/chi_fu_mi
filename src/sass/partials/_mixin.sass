@@ -1,0 +1,22 @@
+@use './_variable' as *
+
+@mixin borderBtn($bg)
+    background-image: $bg
+    position: absolute
+    border-radius: 50%
+    display: flex
+    align-items: center
+    justify-content: center
+    height: $btnBorder_height
+    width: $btnBorder_height
+
+@mixin btn()
+    background-color: $white
+    border-radius: 50%
+    height: $btn_height
+    width: $btn_height
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    

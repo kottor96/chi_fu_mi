@@ -1,0 +1,39 @@
+@use './_variable' as *
+@use './_mixin' as *
+
+section
+    display: flex
+    align-items: center
+    justify-content: center
+#divJeux
+    background-image: url('./assets/bg/bg-triangle.svg')
+    background-repeat: no-repeat
+    background-size: 75%
+    background-position: center
+    width: 40rem
+    height: 30rem
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    >div
+        width: 5rem
+        height: 5rem
+
+    .rouge
+        @include borderBtn($bg: $rockGradient)
+        top: 0
+        left: 3rem
+        div
+            @include btn()
+    .jaune
+        top: 0
+        right: 3rem
+        @include borderBtn($bg: $scissorsGradient)
+        div
+            @include btn()
+    .bleu
+        bottom: 0
+        @include borderBtn($bg: $paperGradient)
+        div
+            @include btn()

@@ -1,10 +1,106 @@
 body {
   margin: 0;
+  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
 }
 
 #root {
-  background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   min-height: 100vh;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#divJeux {
+  background-image: url("./assets/bg/bg-triangle.svg");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  width: 40rem;
+  height: 30rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divJeux > div {
+  width: 5rem;
+  height: 5rem;
+}
+#divJeux .rouge {
+  background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  top: 0;
+  left: 3rem;
+}
+#divJeux .rouge div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+#divJeux .jaune {
+  top: 0;
+  right: 3rem;
+  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+#divJeux .jaune div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+#divJeux .bleu {
+  bottom: 0;
+  background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+#divJeux .bleu div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 8rem;
+  width: 8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+
+header {
+  margin: 5rem;
+  padding: 2rem;
+  display: flex;
+  justify-content: space-between;
+  color: rgb(255, 255, 255);
 }
 
 /*# sourceMappingURL=index.css.map */
