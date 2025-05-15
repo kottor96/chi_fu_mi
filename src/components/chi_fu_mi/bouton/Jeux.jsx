@@ -3,7 +3,12 @@ import Bouton from "./button";
 export default function Jeux() {
     return(
         <section>
-            <Bouton/>
+            <div id="divJeux">
+                <Bouton/>
+                <Bouton/>
+                <Bouton/>
+            </div>
+            
         </section>
     )
 }

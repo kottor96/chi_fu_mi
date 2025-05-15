@@ -1,7 +1,7 @@
 import Scoring from "./compteur/Score";
 import Logo from "./logo/logo";
 
-export default function Header(props ){
+export default function HeaderP(props ){
     return(
         <header>
             <Logo/>
