@@ -8,6 +8,86 @@ section
     align-items: center
     justify-content: center
 
+
+
+.jaune
+    @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height,$color:$yellowShadow)
+    div
+        @include btn($btn_height,$yellow)
+.rouge
+    @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$redShadow)
+    div
+        @include btn($btn_height,$red)
+.violet
+    @include borderBtn($bg: $lizardGradient, $taille: $btnBorder_height, $color:$lizzarShadow)
+    div
+        @include btn($btn_height,$lizzar)
+.cyan
+    @include borderBtn($bg: $cyanGradient, $taille: $btnBorder_height, $color:$cyanShadow)
+    div
+        @include btn($btn_height,$cyan)
+.bleu
+    @include borderBtn($bg: $paperGradient, $taille: $btnBorder_height,$color:$blueShadow)
+    div
+        @include btn($btn_height,$blue)
+
+// 5 fiv
+#divJeux5
+    background-image: url('./assets/bg/bg-pentagon.svg')
+    background-repeat: no-repeat
+    background-size: 75%
+    background-position: center
+    margin-top: 10vh
+    width: 34rem
+    height: 26rem
+    position: relative
+    display: flex
+    align-items: center
+    justify-content: center
+    .rouge
+        top: 5rem
+        right: 2.2rem
+        position: absolute
+        
+    .jaune
+        top: -2rem
+        position: absolute
+        
+    .bleu
+        bottom: -1rem
+        right: 3.5rem
+        position: absolute
+
+    .violet
+        bottom: -1rem
+        left: 3.5rem
+        position: absolute
+
+    .cyan
+        position: absolute
+        top: 5rem
+        left: 2.2rem
+
+
+
+    div
+        >div:hover
+            background-color: $whiteBis
+            cursor: pointer
+            box-shadow: none
+            img
+                transform: translateY(3px)
+                opacity: 1
+    div
+        >div
+            transition: 0.5s 
+            img
+                transform: translateY(-4px)
+                transition: 0.5s
+                opacity: 0.7
+
+
+// simple
 #divJeux
     background-image: url('./assets/bg/bg-triangle.svg')
     background-repeat: no-repeat
@@ -39,25 +119,18 @@ section
 
             
     .rouge
-        @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$redShadow)
         top: -2rem
         left: 2.2rem
         position: absolute
-        div
-            @include btn($btn_height,$red)
+        
     .jaune
         top: -2rem
         right: 2.2rem
         position: absolute
-        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height,$color:$yellowShadow)
-        div
-            @include btn($btn_height,$yellow)
+        
     .bleu
         bottom: 0
-        @include borderBtn($bg: $paperGradient, $taille: $btnBorder_height,$color:$blueShadow)
         position: absolute
-        div
-            @include btn($btn_height,$blue)
 
 #divLancer
     width: 40rem
@@ -89,6 +162,20 @@ section
             @include btn($btn_heightBis,$blue)
         &.gagneur
             animation: gagneurBlue 1s forwards infinite  !important
+    .violet
+        @include borderBtn($bg: $lizardGradient, $taille: $btnBorder_heightBis, $color:$lizzarShadow)
+        div
+            @include btn($btn_heightBis,$lizzar)
+        &.gagneur
+            animation: gagneurViolet 1s forwards infinite  !important
+    .cyan
+        @include borderBtn($bg: $cyanGradient, $taille: $btnBorder_heightBis, $color:$cyanShadow)
+        div
+            @include btn($btn_heightBis,$cyan)
+        &.gagneur
+            animation: gagneurCyan 1s forwards infinite  !important
+
+
     >div:last-of-type
         position: absolute
         left: 50%               

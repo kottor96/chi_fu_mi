@@ -2,18 +2,31 @@ import Bouton from "./button";
 import pierre from "../../../assets/icon/icon-rock.svg"
 import papier from "../../../assets/icon/icon-paper.svg"
 import ciseaux from "../../../assets/icon/icon-scissors.svg"
+import spock from "../../../assets/icon/icon-spock.svg"
+import lizzard from "../../../assets/icon/icon-lizard.svg"
 import Relancer from "./Relancer";
 
+const tableau = [
+    {arme:pierre, id:'pierre', alt:'pierre', color:'rouge'},
+    {arme:papier, id:'papier', alt:'papier', color:'bleu'},
+    {arme:ciseaux, id:'ciseaux', alt:'cicesaux', color:'jaune'},
+    
+]
+const tableau2 = [
+    {arme:pierre, id:'pierre', alt:'pierre', color:'rouge'},
+    {arme:papier, id:'papier', alt:'papier', color:'bleu'},
+    {arme:ciseaux, id:'ciseaux', alt:'cicesaux', color:'jaune'},
+    {arme:spock, id:'spock', alt:'spock', color:'cyan'},
+    {arme:lizzard, id:'lizzard', alt:'lizzard', color:'violet'}
+]
 export default function Jeux(props) {
-    let tableau = [
-        {arme:pierre, id:'pierre', alt:'pierre', color:'rouge'},
-        {arme:papier, id:'papier', alt:'papier', color:'bleu'},
-        {arme:ciseaux, id:'ciseaux', alt:'cicesaux', color:'jaune'}
-    ]
+    
     const selection = [
-        tableau.find((item) => item.id == props.playerChose),
-        tableau.find((item) => item.id == props.botChose),
+        tableau2.find((item) => item.id == props.playerChose),
+        tableau2.find((item) => item.id == props.botChose),
     ];
+    
+    
     
     return(
         <section>
@@ -25,11 +38,23 @@ export default function Jeux(props) {
             }
             {!props.lancer? 
                 <>
-                    <div id="divJeux">
-                        {tableau.map((element)=>(
-                            <Bouton key={element.id} {...element} {...props} />
-                        ))}
-                    </div>
+                    {!props.mode ?
+                        
+                        <div id="divJeux">
+                            {tableau.map((element)=>(
+                                <Bouton key={element.id} {...element} {...props} />
+                            ))}
+                        </div>
+                        
+                        :
+
+                        <div id="divJeux5">
+                            {tableau2.map((element)=>(
+                                <Bouton key={element.id} {...element} {...props} />
+                            ))}
+                        </div>
+                    }
+                    
                 </>
                 :
                 <>
@@ -47,6 +72,7 @@ export default function Jeux(props) {
                         ))}
                         <Relancer {...props}/>
                     </div>
+                    
                 </>
             }
                 

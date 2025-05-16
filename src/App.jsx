@@ -19,6 +19,9 @@ function App() {
   const [play,setPlay] = useState(false)
   const [resultat,setResultat] = useState('')
   const [rule,setRule] = useState(false)
+  const [mode5,setMode5] = useState(false)
+
+  
   function ocRule() {
     rule? setRule(false) : setRule(true)
   }
@@ -28,6 +31,8 @@ function App() {
   function defaite() {
     setBotScore(botScore+1)
   }
+
+
   function jouer(e) {
     let random = Math.round(Math.random()*2)
     let botChosen = gameRule[random]
@@ -51,14 +56,20 @@ function App() {
     )
     setPlay(true)
   }
+
   function relancer(){
     setPlay(false)
     setResultat('')
   }
-  
+
+  function play5fiv(){
+    mode5?setMode5(false):setMode5(true)
+  }
+
   return (
     <>
-      <Page ocRule={ocRule} rule={rule} relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}/>
+      <Page changerMode={play5fiv} mode={mode5} ocRule={ocRule} rule={rule} relancer={relancer} resultat={resultat} 
+      score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}/>
       
     </>
   )

@@ -40,11 +40,207 @@ body {
     box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%), 0px 8px 0px 30px transparent, 0px 8px 0px 60px transparent;
   }
 }
+@keyframes gagneurCyan {
+  0% {
+    box-shadow: 0 8px 0px 0px hsl(189, 59%, 43%), 0px 8px 0px 0px rgba(255, 255, 255, 0.2), 0px 8px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 8px 0px 0px hsl(189, 59%, 43%), 0px 8px 0px 30px transparent, 0px 8px 0px 60px transparent;
+  }
+}
+@keyframes gagneurViolet {
+  0% {
+    box-shadow: 0 8px 0px 0px hsl(261, 73%, 50%), 0px 8px 0px 0px rgba(255, 255, 255, 0.2), 0px 8px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 8px 0px 0px hsl(261, 73%, 50%), 0px 8px 0px 30px transparent, 0px 8px 0px 60px transparent;
+  }
+}
 section {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.jaune {
+  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%);
+}
+.jaune div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(39, 89%, 39%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rouge {
+  background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%);
+}
+.rouge div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(349, 71%, 42%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.violet {
+  background-image: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(261, 73%, 50%);
+}
+.violet div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(261, 73%, 50%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cyan {
+  background-image: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(189, 59%, 43%);
+}
+.cyan div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(189, 59%, 43%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bleu {
+  background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%);
+}
+.bleu div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(230, 89%, 52%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#divJeux5 {
+  background-image: url("./assets/bg/bg-pentagon.svg");
+  background-repeat: no-repeat;
+  background-size: 75%;
+  background-position: center;
+  margin-top: 10vh;
+  width: 34rem;
+  height: 26rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divJeux5 .rouge {
+  top: 5rem;
+  right: 2.2rem;
+  position: absolute;
+}
+#divJeux5 .jaune {
+  top: -2rem;
+  position: absolute;
+}
+#divJeux5 .bleu {
+  bottom: -1rem;
+  right: 3.5rem;
+  position: absolute;
+}
+#divJeux5 .violet {
+  bottom: -1rem;
+  left: 3.5rem;
+  position: absolute;
+}
+#divJeux5 .cyan {
+  position: absolute;
+  top: 5rem;
+  left: 2.2rem;
+}
+#divJeux5 div > div:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+  box-shadow: none;
+}
+#divJeux5 div > div:hover img {
+  transform: translateY(3px);
+  opacity: 1;
+}
+#divJeux5 div > div {
+  transition: 0.5s;
+}
+#divJeux5 div > div img {
+  transform: translateY(-4px);
+  transition: 0.5s;
+  opacity: 0.7;
 }
 
 #divJeux {
@@ -78,84 +274,18 @@ section {
   opacity: 0.7;
 }
 #divJeux .rouge {
-  background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10rem;
-  width: 10rem;
-  max-width: 30vw;
-  max-height: 30vw;
-  box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%);
   top: -2rem;
   left: 2.2rem;
   position: absolute;
-}
-#divJeux .rouge div {
-  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(349, 71%, 42%) inset;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  height: 7rem;
-  max-width: 20vw;
-  max-height: 20vw;
-  width: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 #divJeux .jaune {
   top: -2rem;
   right: 2.2rem;
   position: absolute;
-  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10rem;
-  width: 10rem;
-  max-width: 30vw;
-  max-height: 30vw;
-  box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%);
-}
-#divJeux .jaune div {
-  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(39, 89%, 39%) inset;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  height: 7rem;
-  max-width: 20vw;
-  max-height: 20vw;
-  width: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 #divJeux .bleu {
   bottom: 0;
-  background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 10rem;
-  width: 10rem;
-  max-width: 30vw;
-  max-height: 30vw;
-  box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%);
   position: absolute;
-}
-#divJeux .bleu div {
-  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(230, 89%, 52%) inset;
-  background-color: rgb(255, 255, 255);
-  border-radius: 50%;
-  height: 7rem;
-  max-width: 20vw;
-  max-height: 20vw;
-  width: 7rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
 #divLancer {
@@ -246,6 +376,60 @@ section {
 }
 #divLancer .bleu.gagneur {
   animation: gagneurBlue 1s forwards infinite !important;
+}
+#divLancer .violet {
+  background-image: radial-gradient(hsl(261, 73%, 60%), hsl(261, 72%, 63%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 15rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(261, 73%, 50%);
+}
+#divLancer .violet div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(261, 73%, 50%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 10rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divLancer .violet.gagneur {
+  animation: gagneurViolet 1s forwards infinite !important;
+}
+#divLancer .cyan {
+  background-image: radial-gradient(hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 15rem;
+  width: 15rem;
+  max-width: 30vw;
+  max-height: 30vw;
+  box-shadow: 0 8px 0px 0px hsl(189, 59%, 43%);
+}
+#divLancer .cyan div {
+  box-shadow: 0 -8px 0 0 rgb(214, 214, 214), 0 -6px 0 0 hsl(189, 59%, 43%) inset;
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 10rem;
+  max-width: 20vw;
+  max-height: 20vw;
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#divLancer .cyan.gagneur {
+  animation: gagneurCyan 1s forwards infinite !important;
 }
 #divLancer > div:last-of-type {
   position: absolute;
@@ -416,6 +600,11 @@ header {
   #divJeux .bleu {
     bottom: -1rem;
   }
+  #divJeux5 {
+    width: 100vw;
+    background-size: 70% 90%;
+    height: 40vh;
+  }
   #divLancer {
     position: relative;
     width: 100vw;
@@ -483,10 +672,23 @@ header {
   #divJeux .bleu {
     bottom: -1rem;
   }
+  #divJeux5 {
+    width: 100vw;
+    background-size: 70% 90%;
+    height: 40vh;
+  }
+  #divJeux5 img {
+    height: 70%;
+    width: 70%;
+  }
   #divLancer {
     position: relative;
     width: 100%;
     height: 30rem;
+  }
+  #divLancer img {
+    height: 70%;
+    width: 70%;
   }
   #choseTitle {
     width: 100%;

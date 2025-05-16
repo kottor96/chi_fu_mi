@@ -1,6 +1,6 @@
 export default function BtnRule({ocRule}){
     return(
-        <div id="btnRule">
+        <div>
             <button onClick={ocRule} className="action">Rule</button>
         </div>
     )

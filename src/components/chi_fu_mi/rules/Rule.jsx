@@ -7,7 +7,7 @@ export default function Rule({rule,ocRule}){
             <div>
                 <div id="mondal_header">
                     <h2>règle</h2>
-                    <img class='action' src={x} alt="crois" onClick={ocRule}/>
+                    <img className='action' src={x} alt="crois" onClick={ocRule}/>
                 </div>
                 <img src={rule} alt='regle' />
             </div>
