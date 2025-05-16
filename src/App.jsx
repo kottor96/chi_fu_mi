@@ -17,6 +17,7 @@ function App() {
   const [playerChose,setPlayerChose] = useState()
   const [botChose,setBotChose] = useState()
   const [play,setPlay] = useState(false)
+  const [resultat,setResultat] = useState('')
 
   function victoire() {
     setScore(score+1)
@@ -30,29 +31,30 @@ function App() {
     
     
     const chose = gameRule.find(element=>element.type === e.currentTarget.id)
-    let joueurGagne = false
-    let botgagne = false
-    let egaliter = false
-    
+
     setBotChose(botChosen.type)
     setPlayerChose(chose.type)
 
     botChosen.gagne.map((element)=>{
       
       element==chose.type ?
-        (botgagne=true,
+        (setResultat('bot'),
         defaite())
       
         :chose.gagne.map((element2)=>{
-          element2 == botChosen.type ? (joueurGagne=true,victoire()) : (console.log('egaliter'),egaliter=true)
+          element2 == botChosen.type ? (setResultat('joueur'),victoire()) : setResultat( 'egaliter')
         })
     })
     setPlay(true)
   }
+  function relancer(){
+    setPlay(false)
+    setResultat('')
+  }
 
   return (
     <>
-      <Page score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}
+      <Page relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}
       />
     </>
   )

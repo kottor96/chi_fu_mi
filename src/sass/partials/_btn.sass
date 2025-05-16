@@ -24,26 +24,31 @@ section
         @include borderBtn($bg: $rockGradient)
         top: 0
         left: 3rem
+        position: absolute
         div
             @include btn()
     .jaune
         top: 0
         right: 3rem
+        position: absolute
         @include borderBtn($bg: $scissorsGradient)
         div
             @include btn()
     .bleu
         bottom: 0
         @include borderBtn($bg: $paperGradient)
+        position: absolute
         div
             @include btn()
 #divLancer
     width: 40rem
     height: 30rem
-    position: relative
+    
     display: flex
-    justify-content: space-evenly
+    justify-content: space-between
     align-items: center
+
+    position: relative
     >div
         width: 5rem
         height: 5rem
@@ -59,7 +64,7 @@ section
         @include borderBtn($bg: $paperGradient)
         div
             @include btn()
-    >div:first-of-type
-        left: 0
     >div:last-of-type
-        right: 0
+        position: absolute
+        left: 50%               
+        transform: translateX(-50%)

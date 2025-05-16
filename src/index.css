@@ -31,7 +31,6 @@ section {
 }
 #divJeux .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  position: absolute;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -40,6 +39,7 @@ section {
   width: 10rem;
   top: 0;
   left: 3rem;
+  position: absolute;
 }
 #divJeux .rouge div {
   background-color: rgb(255, 255, 255);
@@ -49,13 +49,12 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
 }
 #divJeux .jaune {
   top: 0;
   right: 3rem;
-  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   position: absolute;
+  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -71,18 +70,17 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
 }
 #divJeux .bleu {
   bottom: 0;
   background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  position: absolute;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  position: absolute;
 }
 #divJeux .bleu div {
   background-color: rgb(255, 255, 255);
@@ -92,16 +90,15 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
 }
 
 #divLancer {
   width: 40rem;
   height: 30rem;
-  position: relative;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  position: relative;
 }
 #divLancer > div {
   width: 5rem;
@@ -109,7 +106,6 @@ section {
 }
 #divLancer .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
-  position: absolute;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -125,11 +121,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
 }
 #divLancer .jaune {
   background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
-  position: absolute;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -145,11 +139,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
 }
 #divLancer .bleu {
   background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
-  position: absolute;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -165,13 +157,11 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: absolute;
-}
-#divLancer > div:first-of-type {
-  left: 0;
 }
 #divLancer > div:last-of-type {
-  right: 0;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 header {
