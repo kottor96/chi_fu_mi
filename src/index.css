@@ -35,8 +35,17 @@ section {
   cursor: pointer;
   box-shadow: none;
 }
+#divJeux div > div:hover img {
+  transform: translateY(3px);
+  opacity: 1;
+}
 #divJeux div > div {
   transition: 0.5s;
+}
+#divJeux div > div img {
+  transform: translateY(-4px);
+  transition: 0.5s;
+  opacity: 0.7;
 }
 #divJeux .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
@@ -179,6 +188,14 @@ section {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+}
+#divLancer div > div {
+  transition: 0.5s;
+}
+#divLancer div > div img {
+  transform: translateY(-4px);
+  transition: 0.5s;
+  opacity: 0.7;
 }
 
 #relancer {
