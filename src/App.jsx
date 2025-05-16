@@ -14,6 +14,10 @@ const gameRule= [
 function App() {
   const [score,setScore] = useState(0)
   const [botScore,setBotScore] = useState(0)
+  const [playerChose,setPlayerChose] = useState()
+  const [botChose,setBotChose] = useState()
+  const [play,setPlay] = useState(false)
+
   function victoire() {
     setScore(score+1)
   }
@@ -23,27 +27,33 @@ function App() {
   function jouer(e) {
     const random = Math.round(Math.random()*3)
     const botChosen = gameRule[random]
-    const chose = gameRule.find(element=>element.type === 'pierre')
     
+    
+    const chose = gameRule.find(element=>element.type === e.currentTarget.id)
+    let joueurGagne = false
+    let botgagne = false
+    let egaliter = false
+    
+    setBotChose(botChosen.type)
+    setPlayerChose(chose.type)
+
     botChosen.gagne.map((element)=>{
       
-      console.log(score);
       element==chose.type ?
-        console.log('bot a gagner')+defaite()
+        (botgagne=true,
+        defaite())
       
         :chose.gagne.map((element2)=>{
-          element2 == botChosen.type ? console.log('joueur a gagner')+victoire() : console.log('egaliter')
+          element2 == botChosen.type ? (joueurGagne=true,victoire()) : (console.log('egaliter'),egaliter=true)
         })
     })
-    
-
-    // botChosen == e.target.value ?    
+    setPlay(true)
   }
-  jouer()
 
   return (
     <>
-      <Page score={score} botScore={botScore}/>
+      <Page score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}
+      />
     </>
   )
 }
