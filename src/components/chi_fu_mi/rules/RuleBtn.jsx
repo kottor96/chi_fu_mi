@@ -1,7 +1,7 @@
-export default function BtnRule(){
+export default function BtnRule({ocRule}){
     return(
-        <div>
-            <button>Rule</button>
+        <div id="btnRule">
+            <button onClick={ocRule}>Rule</button>
         </div>
     )
 }

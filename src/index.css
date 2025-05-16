@@ -4,7 +4,7 @@ body {
 }
 
 #root {
-  min-height: 100vh;
+  max-height: 90vh;
 }
 
 section {
@@ -188,7 +188,7 @@ section {
 }
 
 header {
-  margin: 3rem 10rem;
+  margin: 2rem 10rem;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 10px;
   padding: 1rem;
@@ -222,6 +222,33 @@ header {
 
 #score_red {
   color: hsl(349, 71%, 52%);
+}
+
+#mondal {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(5px);
+}
+#mondal img {
+  background-color: rgb(255, 255, 255);
+  padding: 5rem;
+  border-radius: 10px;
+}
+
+#btnRule {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 5rem;
+  margin-bottom: 3rem;
+  border-radius: 10px;
 }
 
 /*# sourceMappingURL=index.css.map */

@@ -1,6 +1,6 @@
 export default function Rule({rule}){
     return(
-        <div>
+        <div id="mondal">
             <img src={rule} alt='regle' />
         </div>
     )

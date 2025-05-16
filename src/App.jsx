@@ -18,7 +18,10 @@ function App() {
   const [botChose,setBotChose] = useState()
   const [play,setPlay] = useState(false)
   const [resultat,setResultat] = useState('')
-
+  const [rule,setRule] = useState(false)
+  function ocRule() {
+    rule? setRule(false) : setRule(true)
+  }
   function victoire() {
     setScore(score+1)
   }
@@ -56,8 +59,10 @@ function App() {
   
   return (
     <>
-      <Page relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}
-      />
+      <div  onClick={rule ? ocRule : undefined }>
+        <Page ocRule={ocRule} rule={rule} relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}/>
+      </div>
+      
     </>
   )
 }
