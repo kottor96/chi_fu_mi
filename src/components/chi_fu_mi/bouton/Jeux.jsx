@@ -17,7 +17,12 @@ export default function Jeux(props) {
     
     return(
         <section>
-            
+            {props.lancer && 
+                <div id="choseTitle">
+                    <h2>Votre choix</h2>
+                    <h2>Le choix de la maison</h2>
+                </div>
+            }
             {!props.lancer? 
                 <>
                     <div id="divJeux">
@@ -30,7 +35,7 @@ export default function Jeux(props) {
                 <>
                     <div id="divLancer">
                         {selection.map((element,index) => (
-                            <Bouton key={index} {...element} />
+                            <Bouton key={index} {...element} lancer={props.lancer}/>
                         ))}
                         <Relancer {...props}/>
                     </div>

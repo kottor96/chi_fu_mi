@@ -2,11 +2,9 @@
 
 export default function Scoring({score,botScore}) {
     return(
-        <div>
-            <p>
-                score <br />
-                <span id="score">J: {score} - B: {botScore}</span>
-            </p>  
+        <div id="scoring">
+            <p>score <br /></p>
+            <p><span id="score_normal">J: {score}</span> - <span id="score_red"> B: {botScore}</span></p>
         </div>
     )
 }

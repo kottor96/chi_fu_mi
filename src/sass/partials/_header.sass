@@ -1,8 +1,30 @@
 @use './_variable' as *
     
 header
-    margin: 5rem
-    padding: 2rem
+    margin: 3rem 10rem
+    border: 2px solid $HeaderOutline
+    border-radius: 10px
+    padding: 1rem
     display: flex
     justify-content: space-between
-    color: $white
+    
+#scoring
+    border-radius: 10px
+    display: flex
+    align-items: center
+    flex-direction: column
+    justify-content: center
+    background: $white
+    padding: 0.2rem 3rem
+    gap: 1rem
+    p
+        margin: 0
+    p:first-of-type
+        font-size: 1.5rem
+    p:last-of-type
+        font-size: 2rem
+#score_normal
+    color: $darkText
+#score_red
+    color: $red
+

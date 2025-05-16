@@ -9,6 +9,7 @@ body {
 
 section {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -18,16 +19,12 @@ section {
   background-repeat: no-repeat;
   background-size: 75%;
   background-position: center;
-  width: 40rem;
-  height: 30rem;
+  width: 34rem;
+  height: 26rem;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#divJeux > div {
-  width: 5rem;
-  height: 5rem;
 }
 #divJeux .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
@@ -100,24 +97,20 @@ section {
   align-items: center;
   position: relative;
 }
-#divLancer > div {
-  width: 5rem;
-  height: 5rem;
-}
 #divLancer .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
 }
 #divLancer .rouge div {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  height: 7rem;
-  width: 7rem;
+  height: 10rem;
+  width: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,14 +121,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
 }
 #divLancer .jaune div {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  height: 7rem;
-  width: 7rem;
+  height: 10rem;
+  width: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -146,14 +139,14 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 10rem;
-  width: 10rem;
+  height: 15rem;
+  width: 15rem;
 }
 #divLancer .bleu div {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
-  height: 7rem;
-  width: 7rem;
+  height: 10rem;
+  width: 10rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,12 +157,71 @@ section {
   transform: translateX(-50%);
 }
 
+#relancer {
+  top: 30%;
+  transform: translateY(-30%);
+  color: rgb(255, 255, 255);
+  width: min-content;
+}
+#relancer p {
+  font-size: 2em;
+}
+#relancer button {
+  width: 100%;
+}
+
+#choseTitle {
+  flex-direction: row;
+  display: flex;
+  position: relative;
+  width: 40rem;
+}
+#choseTitle h2 {
+  position: absolute;
+  color: rgb(255, 255, 255);
+}
+#choseTitle h2:first-of-type {
+  left: 3rem;
+}
+#choseTitle h2:last-of-type {
+  right: 1rem;
+}
+
 header {
-  margin: 5rem;
-  padding: 2rem;
+  margin: 3rem 10rem;
+  border: 2px solid hsl(217, 16%, 45%);
+  border-radius: 10px;
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
-  color: rgb(255, 255, 255);
+}
+
+#scoring {
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background: rgb(255, 255, 255);
+  padding: 0.2rem 3rem;
+  gap: 1rem;
+}
+#scoring p {
+  margin: 0;
+}
+#scoring p:first-of-type {
+  font-size: 1.5rem;
+}
+#scoring p:last-of-type {
+  font-size: 2rem;
+}
+
+#score_normal {
+  color: hsl(229, 25%, 31%);
+}
+
+#score_red {
+  color: hsl(349, 71%, 52%);
 }
 
 /*# sourceMappingURL=index.css.map */

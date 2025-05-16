@@ -3,43 +3,42 @@
 
 section
     display: flex
+    flex-direction: column
     align-items: center
     justify-content: center
+
 #divJeux
     background-image: url('./assets/bg/bg-triangle.svg')
     background-repeat: no-repeat
     background-size: 75%
     background-position: center
-    width: 40rem
-    height: 30rem
+    width: 34rem
+    height: 26rem
     position: relative
     display: flex
     align-items: center
     justify-content: center
-    >div
-        width: 5rem
-        height: 5rem
 
     .rouge
-        @include borderBtn($bg: $rockGradient)
+        @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height)
         top: 0
         left: 3rem
         position: absolute
         div
-            @include btn()
+            @include btn($btn_height)
     .jaune
         top: 0
         right: 3rem
         position: absolute
-        @include borderBtn($bg: $scissorsGradient)
+        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height)
         div
-            @include btn()
+            @include btn($btn_height)
     .bleu
         bottom: 0
-        @include borderBtn($bg: $paperGradient)
+        @include borderBtn($bg: $paperGradient, $taille: $btnBorder_height)
         position: absolute
         div
-            @include btn()
+            @include btn($btn_height)
 #divLancer
     width: 40rem
     height: 30rem
@@ -49,22 +48,42 @@ section
     align-items: center
 
     position: relative
-    >div
-        width: 5rem
-        height: 5rem
+    
     .rouge
-        @include borderBtn($bg: $rockGradient)
+        @include borderBtn($bg: $rockGradient,$taille: $btnBorder_heightBis)
         div
-            @include btn()
+            @include btn($btn_heightBis)
     .jaune
-        @include borderBtn($bg: $scissorsGradient)
+        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_heightBis)
         div
-            @include btn()
+            @include btn($btn_heightBis)
     .bleu
-        @include borderBtn($bg: $paperGradient)
+        @include borderBtn($bg: $paperGradient,$taille: $btnBorder_heightBis)
         div
-            @include btn()
+            @include btn($btn_heightBis)
     >div:last-of-type
         position: absolute
         left: 50%               
         transform: translateX(-50%)
+#relancer
+    top: 30%
+    transform: translateY(-30%)
+    color: $white
+    width: min-content
+    p
+        font-size: 2em
+    button
+        width: 100%
+
+#choseTitle
+    flex-direction: row
+    display: flex
+    position: relative
+    width: 40rem
+    h2
+        position: absolute
+        color: $white
+    h2:first-of-type
+        left: 3rem
+    h2:last-of-type
+        right: 1rem

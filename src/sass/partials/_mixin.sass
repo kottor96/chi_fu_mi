@@ -1,19 +1,19 @@
 @use './_variable' as *
 
-@mixin borderBtn($bg)
+@mixin borderBtn($bg,$taille)
     background-image: $bg
     border-radius: 50%
     display: flex
     align-items: center
     justify-content: center
-    height: $btnBorder_height
-    width: $btnBorder_height
+    height: $taille
+    width: $taille
 
-@mixin btn()
+@mixin btn($taille)
     background-color: $white
     border-radius: 50%
-    height: $btn_height
-    width: $btn_height
+    height: $taille
+    width: $taille
     display: flex
     align-items: center
     justify-content: center
