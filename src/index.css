@@ -16,12 +16,28 @@ body {
   cursor: pointer;
 }
 
-@keyframes gagneur {
+@keyframes gagneurRed {
   0% {
-    box-shadow: 0px 0px 0px 0px rgba(255, 255, 255, 0.2), 0px 0px 0px 0px rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%), 0px 8px 0px 0px rgba(255, 255, 255, 0.2), 0px 8px 0px 0px rgba(255, 255, 255, 0.2);
   }
   100% {
-    box-shadow: 0px 0px 0px 30px transparent, 0px 0px 0px 60px transparent;
+    box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%), 0px 8px 0px 30px transparent, 0px 8px 0px 60px transparent;
+  }
+}
+@keyframes gagneurYellow {
+  0% {
+    box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%), 0px 8px 0px 0px rgba(255, 255, 255, 0.2), 0px 8px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%), 0px 8px 0px 30px transparent, 0px 8px 0px 60px transparent;
+  }
+}
+@keyframes gagneurBlue {
+  0% {
+    box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%), 0px 8px 0px 0px rgba(255, 255, 255, 0.2), 0px 8px 0px 0px rgba(255, 255, 255, 0.2);
+  }
+  100% {
+    box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%), 0px 8px 0px 30px transparent, 0px 8px 0px 60px transparent;
   }
 }
 section {
@@ -150,9 +166,6 @@ section {
   align-items: center;
   position: relative;
 }
-#divLancer .gagneur {
-  animation: gagneur 1s forwards infinite;
-}
 #divLancer .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   border-radius: 50%;
@@ -176,6 +189,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#divLancer .rouge.gagneur {
+  animation: gagneurRed 1s forwards infinite !important;
 }
 #divLancer .jaune {
   background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
@@ -201,6 +217,9 @@ section {
   align-items: center;
   justify-content: center;
 }
+#divLancer .jaune.gagneur {
+  animation: gagneurYellow 1s forwards infinite !important;
+}
 #divLancer .bleu {
   background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
   border-radius: 50%;
@@ -224,6 +243,9 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+#divLancer .bleu.gagneur {
+  animation: gagneurBlue 1s forwards infinite !important;
 }
 #divLancer > div:last-of-type {
   position: absolute;
@@ -341,12 +363,10 @@ header {
 #btnRule {
   display: flex;
   justify-content: flex-end;
-  margin-right: 5rem;
-  margin-bottom: 3rem;
   border-radius: 10px;
   position: absolute;
   bottom: 2vh;
-  right: -5vw;
+  right: 5vw;
 }
 
 @media screen and (max-width: 768px) and (min-width: 425px) {
@@ -393,8 +413,28 @@ header {
   #divJeux .bleu {
     bottom: -1rem;
   }
+  #divLancer {
+    position: relative;
+    width: 100vw;
+    height: 30rem;
+  }
+  #choseTitle {
+    width: 100%;
+  }
+  #choseTitle h2:first-of-type {
+    left: 0;
+    width: 40%;
+  }
+  #choseTitle h2:last-of-type {
+    text-align: end;
+    width: 40%;
+    right: 0;
+  }
 }
 @media screen and (max-width: 425px) {
+  body {
+    width: 100vw;
+  }
   header {
     box-sizing: border-box;
     flex-basis: content;
@@ -439,6 +479,35 @@ header {
   }
   #divJeux .bleu {
     bottom: -1rem;
+  }
+  #divLancer {
+    position: relative;
+    width: 100%;
+    height: 30rem;
+  }
+  #choseTitle {
+    width: 100%;
+  }
+  #choseTitle h2:first-of-type {
+    left: 0;
+    width: 40%;
+    font-size: 20px;
+  }
+  #choseTitle h2:last-of-type {
+    right: 0;
+    width: 40%;
+    text-align: end;
+  }
+  #relancer {
+    width: 40px;
+  }
+  #relancer p {
+    font-size: 1rem;
+  }
+  #relancer button {
+    box-sizing: content-box;
+    font-size: 0.6rem;
+    width: 100%;
   }
 }
 

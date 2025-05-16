@@ -39,7 +39,7 @@ section
 
             
     .rouge
-        @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$red)
+        @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$redShadow)
         top: -2rem
         left: 2.2rem
         position: absolute
@@ -49,15 +49,16 @@ section
         top: -2rem
         right: 2.2rem
         position: absolute
-        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height,$color:$yellow)
+        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height,$color:$yellowShadow)
         div
             @include btn($btn_height,$yellow)
     .bleu
         bottom: 0
-        @include borderBtn($bg: $paperGradient, $taille: $btnBorder_height,$color:$blue)
+        @include borderBtn($bg: $paperGradient, $taille: $btnBorder_height,$color:$blueShadow)
         position: absolute
         div
             @include btn($btn_height,$blue)
+
 #divLancer
     width: 40rem
     height: 30rem
@@ -67,22 +68,27 @@ section
     align-items: center
 
     position: relative
-    .gagneur
-        animation: gagneur 1s forwards infinite 
+    
 
     .rouge
-        @include borderBtn($bg: $rockGradient,$taille: $btnBorder_heightBis,$color:$red)
+        @include borderBtn($bg: $rockGradient,$taille: $btnBorder_heightBis,$color:$redShadow)
         div
             @include btn($btn_heightBis,$red)
+        &.gagneur
+            animation: gagneurRed 1s forwards infinite  !important
     .jaune
         
-        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_heightBis,$color:$yellow)
+        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_heightBis,$color:$yellowShadow)
         div
             @include btn($btn_heightBis,$yellow)
+        &.gagneur
+            animation: gagneurYellow 1s forwards infinite  !important
     .bleu
-        @include borderBtn($bg: $paperGradient,$taille: $btnBorder_heightBis,$color:$blue)
+        @include borderBtn($bg: $paperGradient,$taille: $btnBorder_heightBis,$color:$blueShadow)
         div
             @include btn($btn_heightBis,$blue)
+        &.gagneur
+            animation: gagneurBlue 1s forwards infinite  !important
     >div:last-of-type
         position: absolute
         left: 50%               

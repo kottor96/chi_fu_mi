@@ -1,7 +1,19 @@
 @use './_variable' as *
     
-@keyframes gagneur
+@keyframes gagneurRed
     0%
-        box-shadow: 0px 0px 0px 0px rgba($white, 0.2), 0px 0px 0px 0px rgba($white, 0.2)
+        box-shadow: $redShadow, 0px 8px 0px 0px rgba($white, 0.2), 0px 8px 0px 0px rgba($white, 0.2)
     100%
-        box-shadow: 0px 0px 0px 30px transparent,0px 0px 0px 60px transparent
+        box-shadow: $redShadow, 0px 8px 0px 30px transparent,0px 8px 0px 60px transparent
+
+@keyframes gagneurYellow
+    0%
+        box-shadow: $yellowShadow, 0px 8px 0px 0px rgba($white, 0.2), 0px 8px 0px 0px rgba($white, 0.2)
+    100%
+        box-shadow: $yellowShadow, 0px 8px 0px 30px transparent,0px 8px 0px 60px transparent
+
+@keyframes gagneurBlue
+    0%
+        box-shadow: $blueShadow, 0px 8px 0px 0px rgba($white, 0.2), 0px 8px 0px 0px rgba($white, 0.2)
+    100%
+        box-shadow: $blueShadow ,0px 8px 0px 30px transparent,0px 8px 0px 60px transparent
