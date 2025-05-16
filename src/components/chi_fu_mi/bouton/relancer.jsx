@@ -1,5 +1,4 @@
 export default function Relancer(props) {
-    console.log(props.resultat);
     
     return(
         <div id="relancer">

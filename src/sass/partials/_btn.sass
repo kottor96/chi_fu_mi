@@ -23,6 +23,7 @@ section
         >div:hover
             background-color: $whiteBis
             cursor: pointer
+            box-shadow: none
     div
         >div
             transition: 0.5s 
@@ -34,20 +35,20 @@ section
         left: 3rem
         position: absolute
         div
-            @include btn($btn_height)
+            @include btn($btn_height,$red)
     .jaune
         top: 0
         right: 3rem
         position: absolute
         @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height,$color:$yellow)
         div
-            @include btn($btn_height)
+            @include btn($btn_height,$yellow)
     .bleu
         bottom: 0
         @include borderBtn($bg: $paperGradient, $taille: $btnBorder_height,$color:$blue)
         position: absolute
         div
-            @include btn($btn_height)
+            @include btn($btn_height,$blue)
 #divLancer
     width: 40rem
     height: 30rem
@@ -61,15 +62,15 @@ section
     .rouge
         @include borderBtn($bg: $rockGradient,$taille: $btnBorder_heightBis,$color:$red)
         div
-            @include btn($btn_heightBis)
+            @include btn($btn_heightBis,$red)
     .jaune
-        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_heightBis,$color:$blue)
+        @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_heightBis,$color:$yellow)
         div
-            @include btn($btn_heightBis)
+            @include btn($btn_heightBis,$yellow)
     .bleu
-        @include borderBtn($bg: $paperGradient,$taille: $btnBorder_heightBis,$color:$yellow)
+        @include borderBtn($bg: $paperGradient,$taille: $btnBorder_heightBis,$color:$blue)
         div
-            @include btn($btn_heightBis)
+            @include btn($btn_heightBis,$blue)
     >div:last-of-type
         position: absolute
         left: 50%               

@@ -55,7 +55,6 @@ function App() {
     setPlay(false)
     setResultat('')
   }
-  console.log(resultat);
   
   return (
     <>
