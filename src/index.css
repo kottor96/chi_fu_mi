@@ -3,13 +3,13 @@ body {
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
   background-repeat: no-repeat;
   background-size: cover;
-  min-height: 100vh;
+  max-height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
 #root {
-  max-height: 90vh;
+  height: 100vh;
 }
 
 .action {
@@ -342,6 +342,9 @@ header {
   justify-content: center;
   backdrop-filter: blur(5px);
 }
+#mondal h2 {
+  margin: 0;
+}
 #mondal > div {
   display: flex;
   flex-direction: column;
@@ -365,7 +368,7 @@ header {
   justify-content: flex-end;
   border-radius: 10px;
   position: absolute;
-  bottom: 2vh;
+  bottom: 10vh;
   right: 5vw;
 }
 
@@ -508,6 +511,29 @@ header {
     box-sizing: content-box;
     font-size: 0.6rem;
     width: 100%;
+  }
+  #mondal {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+  }
+  #mondal > div {
+    display: block;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: rgb(255, 255, 255);
+    padding: 4rem;
+    border-radius: 10px;
+  }
+  #mondal > div div {
+    height: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 
