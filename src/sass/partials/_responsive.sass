@@ -2,3 +2,80 @@
 @use './_variable'
 
 
+@media screen and ( max-width: 768px ) and (min-width: 425px)
+    header
+        box-sizing: border-box
+        flex-basis: content
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 1rem
+        gap: 10%
+        img
+            flex: 1
+        #scoring
+            box-sizing: border-box
+            flex: 2
+            padding: 0.5rem
+            p:first-of-type
+                font-size: 20px 
+                max-height: 30vw
+                 
+            p:last-of-type
+                font-size: 30px
+                max-height: 30vw
+                span
+                    white-space: nowrap
+
+    #divJeux
+        width: 100vw
+        background-size: 70% 90%
+        height: 40vh
+        .rouge
+           left: 10vw 
+        .jaune
+            right: 10vw
+        .bleu
+            bottom: -1rem
+@media screen and ( max-width: 425px ) 
+    header
+        box-sizing: border-box
+        flex-basis: content
+        gap: 10%
+        box-sizing: border-box
+        flex-basis: content
+        display: flex
+        flex-direction: row
+        align-items: center
+        justify-content: space-between
+        padding: 1rem
+        img
+            flex: 1
+            width: 80%
+        #scoring
+            flex: 1
+            padding: 0
+            p:first-of-type
+                font-size: 10px 
+                max-height: 30vw
+                 
+            p:last-of-type
+                font-size: 20px
+                max-height: 30vw
+                span
+                    white-space: nowrap
+
+    #divJeux
+        width: 100vw
+        background-size: 70% 90%
+        height: 40vh
+        .rouge
+           left: 10vw 
+        .jaune
+            right: 10vw
+        .bleu
+            bottom: -1rem
+    
+
+    

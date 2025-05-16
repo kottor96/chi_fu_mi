@@ -1,6 +1,11 @@
 body {
   margin: 0;
   background-image: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
 }
 
 #root {
@@ -31,6 +36,7 @@ section {
   background-repeat: no-repeat;
   background-size: 75%;
   background-position: center;
+  margin-top: 10vh;
   width: 34rem;
   height: 26rem;
   position: relative;
@@ -63,9 +69,11 @@ section {
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%);
-  top: 0;
-  left: 3rem;
+  top: -2rem;
+  left: 2.2rem;
   position: absolute;
 }
 #divJeux .rouge div {
@@ -73,14 +81,16 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
   width: 7rem;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 #divJeux .jaune {
-  top: 0;
-  right: 3rem;
+  top: -2rem;
+  right: 2.2rem;
   position: absolute;
   background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
   border-radius: 50%;
@@ -89,6 +99,8 @@ section {
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%);
 }
 #divJeux .jaune div {
@@ -96,6 +108,8 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
   width: 7rem;
   display: flex;
   align-items: center;
@@ -110,6 +124,8 @@ section {
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%);
   position: absolute;
 }
@@ -118,6 +134,8 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 7rem;
+  max-width: 20vw;
+  max-height: 20vw;
   width: 7rem;
   display: flex;
   align-items: center;
@@ -143,6 +161,8 @@ section {
   justify-content: center;
   height: 15rem;
   width: 15rem;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%);
 }
 #divLancer .rouge div {
@@ -150,6 +170,8 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10rem;
+  max-width: 20vw;
+  max-height: 20vw;
   width: 10rem;
   display: flex;
   align-items: center;
@@ -163,6 +185,8 @@ section {
   justify-content: center;
   height: 15rem;
   width: 15rem;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%);
 }
 #divLancer .jaune div {
@@ -170,6 +194,8 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10rem;
+  max-width: 20vw;
+  max-height: 20vw;
   width: 10rem;
   display: flex;
   align-items: center;
@@ -183,6 +209,8 @@ section {
   justify-content: center;
   height: 15rem;
   width: 15rem;
+  max-width: 30vw;
+  max-height: 30vw;
   box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%);
 }
 #divLancer .bleu div {
@@ -190,6 +218,8 @@ section {
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10rem;
+  max-width: 20vw;
+  max-height: 20vw;
   width: 10rem;
   display: flex;
   align-items: center;
@@ -240,11 +270,12 @@ section {
 }
 
 header {
-  margin: 2rem 10rem;
+  margin: 5vh 20vw;
   border: 2px solid hsl(217, 16%, 45%);
   border-radius: 10px;
   padding: 1rem;
   display: flex;
+  align-items: center;
   justify-content: space-between;
 }
 
@@ -313,6 +344,102 @@ header {
   margin-right: 5rem;
   margin-bottom: 3rem;
   border-radius: 10px;
+  position: absolute;
+  bottom: 2vh;
+  right: -5vw;
+}
+
+@media screen and (max-width: 768px) and (min-width: 425px) {
+  header {
+    box-sizing: border-box;
+    flex-basis: content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 10%;
+  }
+  header img {
+    flex: 1;
+  }
+  header #scoring {
+    box-sizing: border-box;
+    flex: 2;
+    padding: 0.5rem;
+  }
+  header #scoring p:first-of-type {
+    font-size: 20px;
+    max-height: 30vw;
+  }
+  header #scoring p:last-of-type {
+    font-size: 30px;
+    max-height: 30vw;
+  }
+  header #scoring p:last-of-type span {
+    white-space: nowrap;
+  }
+  #divJeux {
+    width: 100vw;
+    background-size: 70% 90%;
+    height: 40vh;
+  }
+  #divJeux .rouge {
+    left: 10vw;
+  }
+  #divJeux .jaune {
+    right: 10vw;
+  }
+  #divJeux .bleu {
+    bottom: -1rem;
+  }
+}
+@media screen and (max-width: 425px) {
+  header {
+    box-sizing: border-box;
+    flex-basis: content;
+    gap: 10%;
+    box-sizing: border-box;
+    flex-basis: content;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+  }
+  header img {
+    flex: 1;
+    width: 80%;
+  }
+  header #scoring {
+    flex: 1;
+    padding: 0;
+  }
+  header #scoring p:first-of-type {
+    font-size: 10px;
+    max-height: 30vw;
+  }
+  header #scoring p:last-of-type {
+    font-size: 20px;
+    max-height: 30vw;
+  }
+  header #scoring p:last-of-type span {
+    white-space: nowrap;
+  }
+  #divJeux {
+    width: 100vw;
+    background-size: 70% 90%;
+    height: 40vh;
+  }
+  #divJeux .rouge {
+    left: 10vw;
+  }
+  #divJeux .jaune {
+    right: 10vw;
+  }
+  #divJeux .bleu {
+    bottom: -1rem;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */

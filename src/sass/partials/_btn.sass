@@ -13,6 +13,7 @@ section
     background-repeat: no-repeat
     background-size: 75%
     background-position: center
+    margin-top: 10vh
     width: 34rem
     height: 26rem
     position: relative
@@ -39,14 +40,14 @@ section
             
     .rouge
         @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$red)
-        top: 0
-        left: 3rem
+        top: -2rem
+        left: 2.2rem
         position: absolute
         div
             @include btn($btn_height,$red)
     .jaune
-        top: 0
-        right: 3rem
+        top: -2rem
+        right: 2.2rem
         position: absolute
         @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_height,$color:$yellow)
         div
