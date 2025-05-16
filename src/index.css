@@ -456,7 +456,7 @@ header {
   }
   header #scoring {
     flex: 1;
-    padding: 0;
+    padding: 1rem 1.5rem;
   }
   header #scoring p:first-of-type {
     font-size: 15px;
