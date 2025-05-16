@@ -95,6 +95,85 @@ section {
   position: absolute;
 }
 
+#divLancer {
+  width: 40rem;
+  height: 30rem;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+#divLancer > div {
+  width: 5rem;
+  height: 5rem;
+}
+#divLancer .rouge {
+  background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+#divLancer .rouge div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+#divLancer .jaune {
+  background-image: radial-gradient(hsl(39, 89%, 49%), hsl(40, 84%, 53%));
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+#divLancer .jaune div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+#divLancer .bleu {
+  background-image: radial-gradient(hsl(230, 89%, 62%), hsl(230, 89%, 65%));
+  position: absolute;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 10rem;
+  width: 10rem;
+}
+#divLancer .bleu div {
+  background-color: rgb(255, 255, 255);
+  border-radius: 50%;
+  height: 7rem;
+  width: 7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+}
+#divLancer > div:first-of-type {
+  left: 0;
+}
+#divLancer > div:last-of-type {
+  right: 0;
+}
+
 header {
   margin: 5rem;
   padding: 2rem;
