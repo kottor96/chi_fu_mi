@@ -1,9 +1,9 @@
 
-export default function Bouton({arme,alt,color,play,id}) {
+export default function Bouton({arme,alt,color,play,id,gagneur}) {
     
     return(
         
-        <div className={color}>
+        <div className={`${color} ${gagneur ? 'gagneur' : ''}`}>
             
             <div id={id} onClick={play && ((e) => play(e))}>
                 

@@ -38,7 +38,6 @@ section
 
             
     .rouge
-        animation: gagneur 1s forwards infinite 
         @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$red)
         top: 0
         left: 3rem
@@ -67,7 +66,9 @@ section
     align-items: center
 
     position: relative
-    
+    .gagneur
+        animation: gagneur 1s forwards infinite 
+
     .rouge
         @include borderBtn($bg: $rockGradient,$taille: $btnBorder_heightBis,$color:$red)
         div

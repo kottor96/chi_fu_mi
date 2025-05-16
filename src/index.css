@@ -56,7 +56,6 @@ section {
   opacity: 0.7;
 }
 #divJeux .rouge {
-  animation: gagneur 1s forwards infinite;
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   border-radius: 50%;
   display: flex;
@@ -132,6 +131,9 @@ section {
   justify-content: space-between;
   align-items: center;
   position: relative;
+}
+#divLancer .gagneur {
+  animation: gagneur 1s forwards infinite;
 }
 #divLancer .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));

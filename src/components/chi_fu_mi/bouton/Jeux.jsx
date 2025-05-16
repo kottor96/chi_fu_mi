@@ -35,7 +35,15 @@ export default function Jeux(props) {
                 <>
                     <div id="divLancer">
                         {selection.map((element,index) => (
-                            <Bouton key={index} {...element} lancer={props.lancer}/>
+                            <Bouton key={index} {...element} lancer={props.lancer} 
+                            gagneur={
+                                (console.log(index,props.resultat),
+                                
+                                props.resultat == 'vous avez gagnez' && index==0 ? true :
+                                props.resultat == 'Vous avez perdu' && index==1 ? true :
+                                false
+                                )
+                            }/>
                         ))}
                         <Relancer {...props}/>
                     </div>
