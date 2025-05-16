@@ -7,7 +7,7 @@ import BtnRule from "./rules/RuleBtn";
 export default function Page(props) {
     return(
         <>
-            {props.rule&& <Rule rule={rule}/>}
+            {props.rule&& <Rule rule={rule} ocRule={props.ocRule}/>}
             <HeaderP {...props}/>
             <Jeux {...props}/>
             <BtnRule {...props}/>

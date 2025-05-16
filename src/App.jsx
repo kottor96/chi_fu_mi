@@ -58,9 +58,7 @@ function App() {
   
   return (
     <>
-      <div  onClick={rule ? ocRule : undefined }>
-        <Page ocRule={ocRule} rule={rule} relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}/>
-      </div>
+      <Page ocRule={ocRule} rule={rule} relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}/>
       
     </>
   )
