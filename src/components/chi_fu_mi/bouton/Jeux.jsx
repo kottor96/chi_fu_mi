@@ -2,7 +2,7 @@ import Bouton from "./button";
 import pierre from "../../../assets/icon/icon-rock.svg"
 import papier from "../../../assets/icon/icon-paper.svg"
 import ciseaux from "../../../assets/icon/icon-scissors.svg"
-import Relancer from "./relancer";
+import Relancer from "./Relancer";
 
 export default function Jeux(props) {
     let tableau = [
@@ -14,7 +14,6 @@ export default function Jeux(props) {
         tableau.find((item) => item.id == props.playerChose),
         tableau.find((item) => item.id == props.botChose),
     ];
-    console.log({...props});
     
     return(
         <section>

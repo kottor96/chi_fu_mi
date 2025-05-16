@@ -1,16 +1,16 @@
 export default function Relancer(props) {
+    console.log(props.resultat);
+    
     return(
         <div id="relancer">
             <p>
                 {
                     <>
-                        {props.resultat == 'bot' && 'Vous avez perdu !'}
-                        {props.resultat == 'joueur' && 'Vous avez gagnez !'}
-                        {props.resultat == 'egaliter' && 'EGALITER !!'}
-                        <button onClick={props.relancer}>Relancer</button>
+                        {props.resultat}
                     </>
                 }
             </p>
+            <button onClick={props.relancer}>Relancer</button>
         </div>
     )
 }

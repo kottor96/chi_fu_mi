@@ -26,32 +26,34 @@ function App() {
     setBotScore(botScore+1)
   }
   function jouer(e) {
-    const random = Math.round(Math.random()*3)
-    const botChosen = gameRule[random]
+    let random = Math.round(Math.random()*2)
+    let botChosen = gameRule[random]
     
     
-    const chose = gameRule.find(element=>element.type === e.currentTarget.id)
+    let chose = gameRule.find(element=>element.type === e.currentTarget.id)
 
     setBotChose(botChosen.type)
     setPlayerChose(chose.type)
 
-    botChosen.gagne.map((element)=>{
-      
-      element==chose.type ?
-        (setResultat('bot'),
-        defaite())
-      
-        :chose.gagne.map((element2)=>{
-          element2 == botChosen.type ? (setResultat('joueur'),victoire()) : setResultat( 'egaliter')
-        })
-    })
+    botChosen.type==chose.type ? setResultat('Egaliter !!') : (
+      botChosen.gagne.map((element)=>{
+        
+        element==chose.type ?
+          (setResultat('Vous avez perdu'),defaite())
+        
+          :chose.gagne.map((element2)=>{
+            element2 == botChosen.type && (setResultat('vous avez gagnez'),victoire())
+          })
+      })
+    )
     setPlay(true)
   }
   function relancer(){
     setPlay(false)
     setResultat('')
   }
-
+  console.log(resultat);
+  
   return (
     <>
       <Page relancer={relancer} resultat={resultat} score={score} botScore={botScore} play={jouer} lancer={play} playerChose={playerChose} botChose={botChose}
