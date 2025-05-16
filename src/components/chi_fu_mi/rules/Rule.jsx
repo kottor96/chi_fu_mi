@@ -4,7 +4,7 @@ export default function Rule({rule,ocRule}){
     
     return(
         <div id="mondal" onClick={ ocRule }>
-            <div onClick={(e)=>{e.stopPropagation()}}>
+            <div>
                 <div id="mondal_header">
                     <h2>règle</h2>
                     <img class='action' src={x} alt="crois" onClick={ocRule}/>
