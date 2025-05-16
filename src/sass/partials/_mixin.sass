@@ -1,6 +1,6 @@
 @use './_variable' as *
 
-@mixin borderBtn($bg,$taille)
+@mixin borderBtn($bg,$taille,$color)
     background-image: $bg
     border-radius: 50%
     display: flex
@@ -8,8 +8,12 @@
     justify-content: center
     height: $taille
     width: $taille
+    box-shadow: 0 8px 0px 0px $color
+    
+
 
 @mixin btn($taille)
+    box-shadow: 0 8px 0 0 $whiteBis inset
     background-color: $white
     border-radius: 50%
     height: $taille

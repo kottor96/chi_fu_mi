@@ -26,6 +26,13 @@ section {
   align-items: center;
   justify-content: center;
 }
+#divJeux div > div:hover {
+  background-color: rgb(214, 214, 214);
+  cursor: pointer;
+}
+#divJeux div > div {
+  transition: 0.5s;
+}
 #divJeux .rouge {
   background-image: radial-gradient(hsl(349, 71%, 52%), hsl(349, 70%, 56%));
   border-radius: 50%;
@@ -34,11 +41,13 @@ section {
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%);
   top: 0;
   left: 3rem;
   position: absolute;
 }
 #divJeux .rouge div {
+  box-shadow: 0 8px 0 0 rgb(214, 214, 214) inset;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 7rem;
@@ -58,8 +67,10 @@ section {
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%);
 }
 #divJeux .jaune div {
+  box-shadow: 0 8px 0 0 rgb(214, 214, 214) inset;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 7rem;
@@ -77,9 +88,11 @@ section {
   justify-content: center;
   height: 10rem;
   width: 10rem;
+  box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%);
   position: absolute;
 }
 #divJeux .bleu div {
+  box-shadow: 0 8px 0 0 rgb(214, 214, 214) inset;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 7rem;
@@ -105,8 +118,10 @@ section {
   justify-content: center;
   height: 15rem;
   width: 15rem;
+  box-shadow: 0 8px 0px 0px hsl(349, 71%, 42%);
 }
 #divLancer .rouge div {
+  box-shadow: 0 8px 0 0 rgb(214, 214, 214) inset;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10rem;
@@ -123,8 +138,10 @@ section {
   justify-content: center;
   height: 15rem;
   width: 15rem;
+  box-shadow: 0 8px 0px 0px hsl(230, 89%, 52%);
 }
 #divLancer .jaune div {
+  box-shadow: 0 8px 0 0 rgb(214, 214, 214) inset;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10rem;
@@ -141,8 +158,10 @@ section {
   justify-content: center;
   height: 15rem;
   width: 15rem;
+  box-shadow: 0 8px 0px 0px hsl(39, 89%, 39%);
 }
 #divLancer .bleu div {
+  box-shadow: 0 8px 0 0 rgb(214, 214, 214) inset;
   background-color: rgb(255, 255, 255);
   border-radius: 50%;
   height: 10rem;
@@ -221,7 +240,7 @@ header {
 }
 
 #score_red {
-  color: hsl(349, 71%, 52%);
+  color: hsl(349, 71%, 42%);
 }
 
 #mondal {
