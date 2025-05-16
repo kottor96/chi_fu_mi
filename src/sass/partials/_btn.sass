@@ -1,5 +1,6 @@
 @use './_variable' as *
 @use './_mixin' as *
+@use './_animation' as *
 
 section
     display: flex
@@ -37,6 +38,7 @@ section
 
             
     .rouge
+        animation: gagneur 1s forwards infinite 
         @include borderBtn($bg: $rockGradient, $taille: $btnBorder_height, $color:$red)
         top: 0
         left: 3rem
@@ -71,6 +73,7 @@ section
         div
             @include btn($btn_heightBis,$red)
     .jaune
+        
         @include borderBtn($bg: $scissorsGradient,$taille: $btnBorder_heightBis,$color:$yellow)
         div
             @include btn($btn_heightBis,$yellow)
